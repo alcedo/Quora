@@ -1,4 +1,4 @@
 Quora
 =====
 
-A repo to store various code snippets that i posted to on Quora
+I read, i blog, i code, i store on github and on Quora
