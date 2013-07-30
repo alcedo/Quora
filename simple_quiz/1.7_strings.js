@@ -15,7 +15,7 @@ function turnZero(matrix) {
     cloneArray();
 
     // iterate through matrix cell
-    for (var i = 0; i < rows; i++) {
+    for (var i = 0; i < rows; i++)
         for (var j = 0; j < cols; j++) {
             // flag 0 entries ! 
             if (matrix[i][j] == 0) {
@@ -23,7 +23,7 @@ function turnZero(matrix) {
                 setRowsZero(j);
             }
         }
-    }
+
 
     // Copy flagged entries over 
     for (var i = 0; i < rows; i++)
