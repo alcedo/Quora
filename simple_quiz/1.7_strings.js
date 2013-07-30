@@ -11,26 +11,71 @@
 function turnZero(matrix) {
     var rows = matrix.length;
     var cols = matrix[0].length;
-    var clone = []; // stores all the marked 0 entries. allows for override 
+    var clone; // stores all the marked 0 entries. allows for override 
+    cloneArray();
 
     // iterate through matrix cell
-    for (var i; i < rows; i++)
-        for (var j; j < cols; j++) {
+    for (var i = 0; i < rows; i++) {
+        for (var j = 0; j < cols; j++) {
             // flag 0 entries ! 
             if (matrix[i][j] == 0) {
-
+                setColsZero(i);
+                setRowsZero(j);
             }
-
-
         }
+    }
+
+    // Copy flagged entries over 
+    for (var i = 0; i < rows; i++)
+        for (var j = 0; j < cols; j++) {
+            if (clone[i][j] == 0)
+                matrix[i][j] = 0;
+        }
+
+    return matrix;
+
+
+    // -----------------	
+    // Helper functions 
+
+    function setColsZero(row) {
+        for (var i = 0; i < cols; i++) {
+            clone[row][i] = 0;
+        }
+    }
+
+    function setRowsZero(col) {
+        for (var i = 0; i < rows; i++)
+            clone[i][col] = 0;
+    }
+
+    function cloneArray() {
+        clone = new Array(rows);
+        for (var i = 0; i < rows; i++)
+            clone[i] = new Array(cols);
+    }
 }
 
+
 var assert = require("assert");
-describe('Array', function() {
-    describe('#indexOf()', function() {
-        it('should return -1 when the value is not present', function() {
-            assert.equal(-2, [1, 2, 3].indexOf(5));
-            assert.equal(-1, [1, 2, 3].indexOf(0));
+describe('Basic Test', function() {
+    describe('Test Set1', function() {
+        it('should work :p', function() {
+            var test = [
+                [1, 2, 4],
+                [3, 0, 9],
+                [0, 2, 4],
+            ];
+
+            var check = [
+                [0, 0, 4],
+                [0, 0, 0],
+                [0, 0, 0],
+            ];
+
+            var results = turnZero(test);
+
+            assert.deepEqual(check, results);
         })
     })
 })
