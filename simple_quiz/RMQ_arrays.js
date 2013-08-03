@@ -40,7 +40,7 @@ function RMQ (data) {
         	}
 	}
 
-	// Creates a N x N demisional array
+	// Creates a N x N dimensional array
 	function squareArray(size) {
 		var myArray = new Array(size);
 		for(var i=0; i<size; i++)
