@@ -53,6 +53,27 @@ h1 {
 }
 
 
+@media (min-width: 769px) {
+  /* hides info panel when viewing on mobile devices */
+  .info-panel-lg { 
+    display: block;
+  }
+
+  .info-panel { 
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  /* hides info panel when viewing on mobile devices */
+  .info-panel-lg { 
+    display: none;
+  }
+
+  .info-panel { 
+    display: block;
+  }
+}
 
 .profile-bar { 
   margin: inherit;
