@@ -46,14 +46,19 @@ h1 {
 	font-weight: normal;
 }
 
-.side-column { 
-  margin-left: -45px;
+@media (min-width: 915px) {
+  .side-column { 
+    margin-left: -45px;
+  }
 }
+
+
 
 .profile-bar { 
   margin: inherit;
   background: #eaeaea;
   height:  40px;
+  width: inherit;
   /*padding: 5px;*/
   /*margin-left: -5px;*/
 }
