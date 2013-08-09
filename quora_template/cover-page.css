@@ -40,11 +40,51 @@
 h1 { 
 	font-size: 1.3em;
 }
+ 
 
 .tag-line { 
 	font-weight: normal;
 }
 
+.side-column { 
+  margin-left: -45px;
+}
+
+.profile-bar { 
+  margin: inherit;
+  background: #eaeaea;
+  height:  40px;
+  /*padding: 5px;*/
+  /*margin-left: -5px;*/
+}
+
+.profile-bar .coy-logo { 
+  display: inline-block;
+  float: left;
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+
+
+}
+
+.profile-bar .coy-desc { 
+  display: inline-block;
+  float: left;
+  margin-left: 10px;
+}
+
+
+.profile-bar .coy-year { 
+  margin-right: 10px;
+  font-weight:  bold;
+}
+
+.work-description {
+  margin-top: 1em;
+  text-align:justify;
+  width: 100%; 
+}
 
 
 /******************************************************************************
